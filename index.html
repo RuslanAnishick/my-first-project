@@ -8,6 +8,94 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Programming</span>
+        </div>
+        <div id="about">
+            <a href="#" title"Capabilities" onclick="slowScroll('#main')">Capabilities</a>
+            <a href="#" title"Benefits" onclick="slowScroll('#overview')">Benefits</a>
+            <a href="#" title"Contacts" onclick="slowScroll('#contacts')">Contacts</a>
+            <a href="#" title"FAQ" onclick="slowScroll('#faq')">FAQ</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Programming</h1>
+        <h3>as a way of life !</h3>
+    </div>
+
+    <div id="main">
+        <div id="intro">
+            <h2>Programming is fun</h2>
+            <span>Large selection of study vectors and robots</span>
+        </div>
+        <div class="text">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, voluptates! Animi nostrum voluptates temporibus voluptas fugiat tenetur officiis id cum! Nobis, consequuntur voluptate dolor sint nihil nemo harum sed consequatur unde cumque labore eum cum iure corrupti consectetur iusto ab ad expedita. Dolores ratione facilis adipisci necessitatibus, consectetur voluptates quis!</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Benefits</h2>
+        <h4>Learn in your free time and choose what you will learn!</h4>
+        
+        <div class="img">
+            <img src="https://itproger.com/img/intensivs/java.svg" alt="">
+            <span>Choose Java and you will write scripts !</span>
+        </div>
+        <div class="img">
+            <img src="https://itproger.com/img/intensivs/python.svg" alt="">
+            <span>Choose Python and write BackEnd !</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center>
+            <h5>Feedback</h5>
+            <h5>If u want start study</h5>
+        </center>
+        <form id="form_input">
+            <label for="name">Name <span>*</span></label><br>
+            <input type="text" placeholder="Write down name" name="name" id="name">
+            <label for="email"><br><label>Your email</label><span>*</span</label><br>
+            <input type="email" placeholder="Write down email" name="email" id="email"><br>
+            <label for="message">Message <span>*</span></label><br>
+            <textarea placeholder="Write down message" name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Send</div>
+        </form>
+    </div>
+
+    <div id="faq">
+        <div>
+            <span class="title">Start</span><br>
+            <span class="heading">Where to begin ?</span>
+            <p>I would like to advise you to start with the Metanit website and choose the programming language that you want to study and read about it and learn something new, and in parallel with this, watch different courses on YouTube or on some sites in the IT field.</p>
+        </div>
+        <div>
+            <span class="title">Courses</span><br>
+            <span class="heading">Which courses should I choose?</span>
+            <p>I would advise you to watch different YouTube channels like SimpleCode, Gosha Dudar, Platinum DEV.</p>
+        </div>
+        <div>
+            <span class="title">Work</span><br>
+            <span class="heading">How to start working somewhere?</span>
+            <p>I can advise you to save your work from the very beginning, make your own website where your resume will be located, as well as write pet code and develop in the field of IT and communicate with people in this field, as well as freelancing with different tasks where you will receive for them your hard earned money.</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('html, body').animate({
+            scrollTop: $(id).offset().top
+            }, 650);
+        }
+
+        $(document).on("scroll", function () {
+            if($(window).scrollTop() == "0")
+            $("header").removeClass("fixed");
+            else
+            $("header").attr("class", "fixed");
+        });
+    </script>
 </body>
 </html>
